@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Luis Gudmalin | Front-End Web Developer & Designer</title>
+    <link rel="shortcut icon" href="src/img/icons/logo.ico" type="image/x-icon">
+    <link rel="stylesheet" href="src/css/main.css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css"
+        integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous" />
+</head>
+<!-- the L svg logo - try to animate the fill into like flowing gradient (the center one) -->
+
+<body>
+    <div class="loader-wrapper">
+        <img src="/src/img/spinner.gif" alt="">
+    </div>
+    <nav class="nav animation">
+        <div class="nav__logo">
+            <img src="src/img/icons/logo.svg" alt="logo" style="filter: brightness(1.2);" />
+        </div>
+        <ul class="nav__list" id="nav__list">
+            <li class="active"><a href="index.html">home</a></li>
+            <li class="li"><span class="hov"></span><a href="src\pages\about.html" class="sova">about</a></li>
+            <li class="li"><span class="hov"></span><a href="src\pages\projects.html" class="sova">projects</a></li>
+            <li class="li"><span class="hov"></span><a href="src\pages\contact.html" class="sova">contact</a></li>
+        </ul>
+        <div class="nav__menu">
+            <i class="fa fa-bars" id="menu__hamburg" onclick="navigator()">
+                <!--NO LIMIT Infinite Navigator--></i>
+        </div>
+    </nav>
+    <main class="home">
+        <div class="home__header">
+            <h1>Front-End Developer <span>|</span> <span class="header__bar"></span>Designer</span> </h1>
+            <p>Hello, I am Luis a self-taught junior front end web developer, practicing the art of bending the will of
+                pixels for a year now. Some text to make this longer.</p>
+            <div class="header__buttons">
+                <button class="animation"><a href="/src/pages/projects.html">See my works</a> </button>
+                <button class="animation"><a href="/src/pages/contact.html">Hire me plss</a> </button>
+            </div>
+        </div>
+        <div class="idk-why-i-put-this-slide">
+        </div>
+        <footer class="footer">
+            <p>Time is the essence.</p>
+            <div class="footer__social-links">
+                <a href="https://github.com/lewsea" target="_blank"><i class="fab fa-github tooltip"><span
+                            class="tooltiptext">See them codes</span></i></a>
+                <a href="https://codepen.io/Lewsea" target="_blank"><i class="fab fa-codepen tooltip"><span
+                            class="tooltiptext">This is quite empty</span></i></a>
+                <a href="https://www.linkedin.com/in/luis-gudmalin-8b0349195/" target="_blank">
+                    <i class="fab fa-linkedin tooltip"><span class="tooltiptext">Yes, i don't have a work
+                            experience</span></i>
+                </a>
+                <a href="https://twitter.com/leewseea" target="_blank"><i class="fab fa-twitter tooltip"><span
+                            class="tooltiptext">Sum weird stuff here</span></i></a>
+            </div>
+        </footer>
+    </main>
+    <script src="src/js/main.js"></script>
+</body>
+
+</html>

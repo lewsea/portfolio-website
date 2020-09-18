@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Luis Gudmalin | Front-End Web Developer & Designer</title>
+    <link rel="shortcut icon" href="../img/icons/logo2.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../css/main.css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css"
+        integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous" />
+</head>
+
+<body>
+    <nav class="nav animation">
+        <div class="nav__logo">
+            <img src="../img/icons/logo.svg" alt="logo" />
+        </div>
+        <ul class="nav__list" id="nav__list">
+            <li class='li'><span class="hov"></span><a href="/index.html" class="sova">home</a></li>
+            <li class="active"><a href="about.html">about</a></li>
+            <li class='li'><span class="hov"></span><a href="projects.html" class="sova">projects</a></li>
+            <li class='li'><span class="hov"></span><a href="contact.html" class="sova">contact</a></li>
+        </ul>
+        <div class="nav__menu">
+            <i class="fa fa-bars" id="menu__hamburg" onclick="navigator()">
+            </i>
+        </div>
+    </nav>
+    <main class="about-container">
+        <ul class="about__links">
+            <li data-target='#about' class="about-links">About Me</li>
+            <li data-target='#timeline' class="about-links">Timeline</li>
+        </ul>
+        <div class="about about-panel about-active" id="about">
+            <div class="about__info">
+                <hr>
+                <div class="about__img">
+                    <img src="../img/icons/identicon.png" alt="identicon" title="identicon">
+                </div>
+                <hr>
+                <h4> I'm <a class="underline">Luis Victor Gudmalin</a> , i am 19 years old. I started learning coding
+                    when my brother gifted me a Udemy course, it was really fun learning how to code and im really
+                    amazed on how you can make cool stuffs in a website. Lorem ipsum dolor sit amet consectetur
+                    adipisicing elit. Similique, praesentium. <br> I also play <a class="underline">League of
+                        Legends</a> (which is the main inspiration of the theme of this website), and i draw sometimes.
+                    I usually code at night or when it is quiet and peaceful so i can focus and code more efficiently.
+                </h4>
+            </div>
+            <div class="about__skills">
+                <div class="skills-container">
+                    <div class="skills-icon">
+                        <i class="fas fa-laptop-code"></i>
+                    </div>
+                    <div class="skills-description">
+                        <!-- simple box 1px or .4 border ::after to add more border stroke -->
+                        <hr>
+                        <p>HTML, CSS (Bootstrap, Tailwind), JavaScript (React, Node, Express, MongoDB) ? You name it. I
+                            have it all covered! Not really i just code along and build something with it and pretend
+                            that i actually know it. </p>
+                        <hr>
+                        <ul class="skills-list">
+                            <h3>Languages</h3>
+                            <li>HTML</li>
+                            <li>CSS(Sass)</li>
+                            <li>JAVASCRIPT</li>
+                            <li>PHP</li>
+                            <li>WORDPRESS</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="skills-container">
+                    <div class="skills-icon">
+                        <i class="fas fa-pen-nib"></i>
+                    </div>
+                    <div class="skills-description">
+                        <hr>
+                        <p>I value simple content structure, clean design patterns, and thoughtful interactions. Well
+                            designing is basically like an art there is no such thing as 'original' designs. So if you
+                            see my designs similar to you just remember that our closest common ancestor is a species of
+                            monkey.</p>
+                        <hr>
+                        <ul class="skills-list">
+                            <h3>Tools</h3>
+                            <li>Photoshop</li>
+                            <li>Figma</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="skills-container">
+                    <div class="skills-icon">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <div class="skills-description">
+                        <hr>
+                        <p>In 2020 you can't go online without having a mobile responsive website. Let me take care of
+                            that for you! Try to run this piece of mf website on 100px width, i dare you. Putting some
+                            random words so it can align to other containers.</p>
+                        <hr>
+                        <ul class="skills-list">
+                            <h3>Frameworks | Libraries</h3>
+                            <li>Bootstrap</li>
+                            <li>ReactJS</li>
+                            <li>Jquery</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="about__quote">
+                <p class="quote">It's not about how much time you have, its how you use it.</p>
+                <p> - mah homie ekko</p>
+            </div>
+        </div>
+        <div class="timeline-container about-panel" id="timeline">
+            <div class="timeline">
+                <!-- <div class="content">
+                    <div class="text-content">
+                        <h4>Somehow managed to make this website working.</h4>
+                        <p>09192020</p>
+                    </div>
+                </div>
+                <div class="content">
+                    <div class="text-content">
+                        <h4>wew</h4>
+                        <p>09192020</p>
+                    </div>
+                </div>
+            </div> -->
+            </div>
+            <button id="scrollBtn">
+                <i class="fas fa-arrow-up"></i>
+            </button>
+    </main>
+    <script src="../js/about.js"></script>
+</body>
+
+</html>

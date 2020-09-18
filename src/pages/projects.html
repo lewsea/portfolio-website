@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Luis Gudmalin | Front-End Web Developer & Designer</title>
+    <link rel="shortcut icon" href="../img/icons/logo2.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../css/main.css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css"
+        integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous" />
+</head>
+
+<body>
+    <div class="loader-wrapper">
+        <img src="../img/Spinner.gif" alt="">
+    </div>
+    <nav class="nav animation">
+        <div class="nav__logo">
+            <img src="../img/icons/logo.svg" alt="logo" />
+        </div>
+        <ul class="nav__list" id="nav__list">
+            <li class='li'><span class="hov"></span><a href="/index.html" class="sova">home</a></li>
+            <li class='li'><span class="hov"></span><a href="about.html" class="sova">about</a></li>
+            <li class="active fix"><a href="projects.html">projects</a></li>
+            <li class='li'><span class="hov"></span><a href="contact.html" class="sova">contact</a></li>
+        </ul>
+        <div class="nav__menu">
+            <i class="fa fa-bars" id="menu__hamburg" onclick="navigator()">
+            </i>
+        </div>
+    </nav>
+    <main class="projects">
+        <div class="top-bar">
+            <ul class="projects-type">
+                <li data-target="#projects" class="project-link">Projects</li>
+                <li data-target="#designs" class="project-link">Designs</li>
+            </ul>
+            <div class="search-bar">
+                <input type="text" id="search-bar" placeholder="Search Projects" value="" name="search
+                ">
+            </div>
+        </div>
+        <div class="projects-grid-container grid-container active-projects" id="projects">
+            <div class="projects-grid__card">
+                <img src="../img/projects-img/github-finder.png" alt="Github Finder" class="card__img">
+                <div class="card__text">
+                    <p>An app that uses Github API to search for Github Users and some infos. Built with React's
+                        component classes.</p>
+                    <div class="card__links">
+                        <a href="">See it Live</a>
+                        <a href="https://google.com">Look at the Code</a>
+                    </div>
+                </div>
+                <div id="cardTitle" class="card__title">
+                    <p class="title">Github Finder</p>
+                </div>
+            </div>
+            <div class="projects-grid__card">
+                <img src="../img/projects-img/yelp-camp.png" alt="YelpCamp" class="card__img">
+                <div class="card__text">
+                    <p>A full stack Web Application.</p>
+                    <div class="card__links">
+                        <a href="#">See it Live</a>
+                        <a href="#">Look at the Code</a>
+                    </div>
+                </div>
+                <div id="cardTitle" class="card__title">
+                    <p class="title">Yelp Camp</p>
+                </div>
+            </div>
+            <div class="projects-grid__card">
+                <img src="../img/projects-img/frontend-mentor-projects.png" alt="FrontendMentor Projects"
+                    class="card__img">
+                <div class="card__text">
+                    <p>Collection of all my solutions to the Frontend Mentor Projects.</p>
+                    <div class="card__links">
+                        <a href="https://dreamy-johnson-8b6ab4.netlify.app/" target="_blank">See it Live</a>
+                        <a href="https://github.com/lewsea/frontend-mentor-challenges" target="_blank">Look at the
+                            Code</a>
+                    </div>
+                </div>
+                <div id="cardTitle" class="card__title">
+                    <p class="title">FrontEnd Mentor Projects</p>
+                </div>
+            </div>
+            <div class="projects-grid__card">
+                <img src="../img/projects-img/day-7.png" alt="7days7websites" class="card__img">
+                <div class="card__text">
+                    <p>Compilation of all projects from Day1 to Day7. From a coding challenge that encourages people to
+                        make 7 projects in 7 days.</p>
+                    <div class="card__links">
+                        <a href="https://brave-newton-3fee7b.netlify.app/day-7-all-projects/" target="_blank">See it
+                            Live</a>
+                        <a href="https://github.com/lewsea/7days7websites" target="_blank">Look at the Code</a>
+                    </div>
+                </div>
+                <div id="cardTitle" class="card__title">
+                    <p class="title">7days7projects</p>
+                </div>
+            </div>
+            <div class="projects-grid__card">
+                <img src="../img/projects-img/portfolio-website.png" alt="Portfolio Website" class="card__img">
+                <div class="card__text">
+                    <p>A portfolio website inspired by the League's Client UI. RITO pls fix the client's errors.</p>
+                    <div class="card__links">
+                        <a href="">See it Live</a>
+                        <a href="#">Look at the Code</a>
+                    </div>
+                </div>
+                <div id="cardTitle" class="card__title">
+                    <p class="title">This website lol</p>
+                </div>
+            </div>
+            <div class="projects-grid__card">
+                <img src="../img/projects-img/Screenshot_2019-11-08-18-29-43 1.png" alt="devchallenges projects"
+                    class="card__img" style="height: 247px;">
+                <div class="card__text">
+                    <p>My take on the devchallenges.io's challanges, every project has some tweaks of mine. </p>
+                    <div class="card__links">
+                        <a href="">See it Live</a>
+                        <a href="https://github.com/lewsea/devchallenges-projects" target="_blank">Look at the Code</a>
+                    </div>
+                </div>
+                <div id="cardTitle" class="card__title">
+                    <p class="title">DevChallenges Projects</p>
+                </div>
+            </div>
+        </div>
+        <div class="designs-grid-container grid-container" id="designs">
+            <div class="designs-card">
+                <div class="card__text">
+                    <h2 class='card-design' data-image='../img/designs-img/1.jpg'>404 Error Page</h2>
+                </div>
+                <img src="../img/designs-img/1.jpg" alt="" class="design__img">
+            </div>
+            <div class="designs-card">
+                <div class="card__text">
+                    <h2 class='card-design' data-image='../img/designs-img/2.jpg'>Landing Page</h2>
+                </div>
+                <img src="../img/designs-img/2.jpg" alt="" class="design__img">
+            </div>
+            <div class="designs-card">
+                <div class="card__text">
+                    <h2 class='card-design' data-image='../img/designs-img/3.jpg'>Restaurant Website</h2>
+                </div>
+                <img src="../img/designs-img/3.jpg" alt="" class="design__img">
+            </div>
+            <div class="designs-card">
+                <div class="card__text">
+                    <h2 class='card-design' data-image='../img/designs-img/1.jpg'>E-commerce Site</h2>
+                </div>
+                <img src="../img/designs-img/1.jpg" alt="" class="design__img">
+            </div>
+            <div class="designs-card">
+                <div class="card__text">
+                    <h2 class='card-design'>Wireframes</h2>
+                </div>
+                <img src="../img/designs-img/5.jpg" alt="" class="design__img">
+            </div>
+            <div class="designs-card">
+                <div class="card__text">
+                    <h2 class='card-design'>Design Animation</h2>
+                </div>
+                <img src="../img/designs-img/6.jpg" alt="" class="design__img">
+            </div>
+            <div class="designs-card">
+                <div class="card__text">
+                    <h2 class='card-design'>Buttons</h2>
+                </div>
+                <img src="../img/designs-img/7.jpg" alt="" class="design__img">
+            </div>
+            <div class="designs-card">
+                <div class="card__text">
+                    <h2 class='card-design'>Grid Gallery</h2>
+                </div>
+                <img src="../img/designs-img/8.jpg" alt="" class="design__img">
+            </div>
+            <div class="designs-card">
+                <div class="card__text">
+                    <h2 class='card-design'>Contact Page</h2>
+                </div>
+                <img src="../img/designs-img/9.jpg" alt="" class="design__img">
+            </div>
+            <div class="designs-card">
+                <div class="card__text">
+                    <h2 class='card-design'>Pricing Component</h2>
+                </div>
+                <img src="../img/designs-img/10.jpg" alt="" class="design__img">
+            </div>
+            <div class="designs-card">
+                <div class="card__text">
+                    <h2 class='card-design'>Advertisement</h2>
+                </div>
+                <img src="../img/designs-img/11.jpg" alt="" class="design__img">
+            </div>
+            <div class="designs-card">
+                <div class="card__text">
+                    <h2 class='card-design'>Newsletter</h2>
+                </div>
+                <img src="../img/designs-img/12.jpg" alt="" class="design__img">
+            </div>
+            <div class="designs-card">
+                <div class="card__text">
+                    <h2 class='card-design'>Design Title</h2>
+                </div>
+                <img src="../img/designs-img/3.jpg" alt="" class="design__img">
+            </div>
+            <div class="designs-card">
+                <div class="card__text">
+                    <h2 class='card-design'>Design Title</h2>
+                </div>
+                <img src="../img/designs-img/11.jpg" alt="" class="design__img">
+            </div>
+            <div class="designs-card">
+                <div class="card__text">
+                    <h2 class='card-design'>Design Title</h2>
+                </div>
+                <img src="../img/designs-img/5.jpg" alt="" class="design__img">
+            </div>
+        </div>
+        <div class="modal">
+            <img src="../img/projects-img/yelp-camp.png" alt="" class="modal-img">
+            <a href="">View on figma <i class="fas fa-long-arrow-alt-right"></i></a>
+        </div>
+    </main>
+    <button id="scrollBtn">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+    <script src="../js/main.js"></script>
+</body>
+
+</html>
