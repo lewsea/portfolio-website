@@ -1,0 +1,102 @@
+.contact {
+  height: 90vh;
+  width: 100%;
+  margin: 0 auto;
+  background: url(../img/circuit-board.svg);
+  .contact-container {
+    width: 50%;
+    margin: 0 auto;
+    h1 {
+      font-size: 3rem;
+      padding: 1rem 0;
+    }
+    p {
+      margin: 14px 0;
+      a {
+        text-transform: none;
+        color: $font-color;
+        text-decoration: underline;
+        font-weight: 700;
+      }
+    }
+    .contact__form {
+      form {
+        display: flex;
+        flex-direction: column;
+        padding: 1.4rem 0;
+      }
+      .form-group {
+        margin-bottom: 1rem;
+        &.name {
+          display: flex;
+          .name {
+            width: 50%;
+          }
+          .email {
+            width: 50%;
+          }
+        }
+      }
+
+      input,
+      textarea {
+        width: 100%;
+        padding: 14px 1.4rem;
+        background-color: $bg-color;
+        border: 1px solid $font-color;
+        color: $font-color;
+        font-size: 1rem;
+        resize: none;
+        font-family: $font-fam;
+        &:invalid:focus {
+          // border-color: crimson;
+        }
+        &:focus {
+          filter: brightness(1.4);
+        }
+      }
+      .sendBtn {
+        font-size: 1rem;
+        cursor: pointer;
+        justify-self: flex-end;
+        align-self: flex-end;
+        color: $font-color;
+        padding: 14px 1.4rem;
+        background-color: $bg-color;
+        border: 1px solid $wew-color;
+        filter: brightness(1.2);
+        &:hover {
+          filter: brightness(1.5);
+        }
+      }
+    }
+    .contact__social-links {
+      display: flex;
+      .container-links {
+        font-family: $font-fam;
+        cursor: pointer;
+        padding: 14px;
+        background-color: #2e2e2e;
+        border-radius: 0 0 10px 10px;
+        border-bottom: 4px solid $wew-color;
+        margin-right: 14px;
+        color: $font-color;
+        box-shadow: 0 2px 6px 0 rgba(212, 212, 212, 0.2);
+        i {
+          margin-right: 10px;
+        }
+        &:hover {
+          filter: brightness(1.2);
+        }
+      }
+    }
+    form {
+      margin: 1rem 0;
+    }
+    .contact__header {
+      h2 {
+        margin-bottom: 1rem;
+      }
+    }
+  }
+}

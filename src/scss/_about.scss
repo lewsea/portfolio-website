@@ -1,0 +1,283 @@
+.about-container {
+  background: url(../img/circuit-board.svg);
+  min-height: 90vh;
+  height: 100%;
+  .about__links {
+    display: flex;
+    width: 95%;
+    margin: 0 auto;
+    text-transform: uppercase;
+    li {
+      padding: 1rem;
+      cursor: pointer;
+      &::after {
+        content: '';
+        width: 0px;
+        height: 1px;
+        display: block;
+        background-color: $font-color;
+        transition: 0.5s;
+      }
+      &:hover {
+        transition: 0.8s;
+        filter: brightness(1.4);
+        &::after {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+.about {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: auto;
+  max-width: 1000px;
+  width: 100%;
+  &__info {
+    background-color: $bg-color;
+    text-align: center;
+    border: 1px solid $font-color;
+    padding: 4rem;
+    margin-bottom: 1rem;
+    h4 {
+      font-size: 1.2rem;
+    }
+    hr:first-of-type {
+      width: 50%;
+      margin: 1rem auto;
+      color: $accent-color;
+      border: none;
+      height: 1px;
+      position: relative;
+      background-image: linear-gradient(
+        to right,
+        rgba(0, 0, 0, 0),
+        $accent-color,
+        rgba(0, 0, 0, 0)
+      );
+      &::before {
+        content: '';
+        display: block;
+        position: absolute;
+        border: 1px solid $font-color;
+        background-color: $bg-color;
+        width: 1.4rem;
+        height: 1.4rem;
+        transform: rotate(45deg) translate(-50%, -50%);
+        left: 46%;
+        top: 5px;
+      }
+    }
+    h4 {
+      line-height: 1.8rem;
+    }
+    hr {
+      margin: 1rem 0;
+      color: $accent-color;
+      border: none;
+      height: 1px;
+      background-image: linear-gradient(
+        to right,
+        rgba(0, 0, 0, 0),
+        $accent-color,
+        rgba(0, 0, 0, 0)
+      );
+    }
+    .about__img {
+      margin: 1.8rem auto;
+      width: 250px;
+      border: 4px solid $font-color;
+      border-radius: 50%;
+      padding: 1.4rem;
+      img {
+        width: 100%;
+      }
+    }
+  }
+  &__skills {
+    padding: 1rem 0;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    .skills-container {
+      transition: all 0.4s ease-in-out;
+      position: relative;
+
+      &:hover {
+        transform: scale(1.1);
+      }
+      .skills-icon {
+        width: 140px;
+        border-radius: 50%;
+        margin: auto;
+        border: 4px solid $accent-color;
+        background-color: $bg-color;
+        margin-bottom: -4rem;
+        position: relative;
+        z-index: 10;
+        i.fas {
+          color: $font-color;
+          font-size: 60px;
+          padding: 1.4rem;
+        }
+        img {
+          max-width: 120px;
+          width: 100%;
+          padding: 1.4rem;
+        }
+      }
+      .skills-description {
+        background-color: $bg-color;
+        padding: 5rem 1rem 3rem 1rem;
+        margin: 0 1rem;
+        border: 1px solid $font-color;
+        border-bottom: 4px solid $accent-color;
+        border-radius: 4px 4px 34px 34px;
+        width: 300px;
+        height: max-content;
+        position: relative;
+        hr:first-of-type {
+          position: relative;
+          width: 75%;
+          margin: 1rem auto;
+          &::before {
+            content: '';
+            display: block;
+            position: absolute;
+            border: 1px solid $font-color;
+            background-color: $bg-color;
+            width: 1.4rem;
+            height: 1.4rem;
+            transform: rotate(45deg) translate(-50%, -50%);
+            left: 46%;
+            top: 5px;
+          }
+        }
+        hr {
+          margin: 1rem 0;
+          color: $accent-color;
+          border: none;
+          height: 1px;
+          background-image: linear-gradient(
+            to right,
+            rgba(0, 0, 0, 0),
+            $accent-color,
+            rgba(0, 0, 0, 0)
+          );
+        }
+        p {
+          margin: 1.4rem 0;
+        }
+        .skills-list {
+          margin: 1rem 0 0 0;
+          h3 {
+            font-size: 1.4rem;
+          }
+          li {
+            margin: 10px 0;
+          }
+        }
+      }
+    }
+  }
+  &__quote {
+    background-color: $bg-color;
+    padding: 1.4rem;
+    border: 1px solid $font-color;
+    text-align: center;
+    margin: 1rem 0;
+    font-size: 1.2rem;
+    p:last-of-type {
+      font-size: 1rem;
+      margin: 0.5rem 0 0 0;
+    }
+    .quote {
+      &::before {
+        content: open-quote;
+      }
+      &::after {
+        content: close-quote;
+      }
+    }
+  }
+}
+
+.about-panel {
+  display: none;
+}
+
+.about-panel.about-active {
+  display: flex;
+}
+
+.timeline-container {
+  justify-content: center;
+  align-items: center;
+  height: 90vh;
+  width: 100%;
+  text-align: center;
+  .timeline {
+    display: flex;
+    width: 100%;
+    height: 14px;
+    background-color: $bg-color;
+    border-top: 2px solid $font-color;
+    border-bottom: 2px solid $font-color;
+    position: relative;
+  }
+  .content {
+    border: 1px solid $accent-color;
+    position: relative;
+    max-width: 240px;
+    &::before {
+      content: '';
+      display: block;
+      background-color: $accent-color;
+      border: 7px solid $bg-color;
+      position: absolute;
+      width: 30px;
+      margin: 0 auto;
+      height: 30px;
+      bottom: -18px;
+      left: 36%;
+      transform: rotate(135deg);
+      z-index: 1;
+    }
+    &::after {
+      content: '';
+      display: block;
+      background-color: $accent-color;
+      position: absolute;
+      margin: 0 auto;
+      width: 35px;
+      height: 35px;
+      left: 33%;
+      bottom: -20px;
+      transform: rotate(135deg);
+    }
+  }
+  .text-content {
+    border: 1px solid $font-color;
+    background-color: $bg-color;
+    padding: 1rem;
+    // margin-top: 2.4rem;
+    margin: 0 1rem;
+    position: relative;
+    bottom: 150px;
+    &::after {
+      content: '';
+      position: absolute;
+      top: 100%;
+      left: 50%;
+      margin-left: -15px;
+      border-width: 15px;
+      border-style: dotted;
+      border-color: $font-color transparent transparent transparent;
+    }
+    p {
+      padding: 1rem 0 0 0;
+    }
+  }
+}

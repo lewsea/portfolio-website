@@ -1,0 +1,43 @@
+@import 'variables';
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: $bg-color;
+  font-family: $font-fam;
+  color: $font-color;
+}
+
+html::-webkit-scrollbar {
+  display: none;
+}
+
+html {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+li {
+  list-style-type: none;
+}
+
+a {
+  cursor: pointer;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+@import 'navigation';
+@import 'home';
+@import 'about';
+@import 'projects';
+@import 'contact';
+@import 'footer';
+@import 'responsive';

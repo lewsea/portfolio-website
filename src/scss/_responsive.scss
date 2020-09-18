@@ -1,0 +1,224 @@
+@include sm-screen {
+  .home {
+    font-size: 1.3rem;
+    &__header {
+      h1 {
+        font-size: 36px !important;
+      }
+    }
+    button {
+      &:first-of-type {
+        margin-right: 1rem;
+      }
+    }
+  }
+  .projects {
+    &-grid-container {
+      width: 100%;
+    }
+    .top-bar {
+      flex-direction: column-reverse;
+      // .search-bar {
+      //   align-self: flex-end;
+      // }
+      // .projects-type {
+      //   align-self: flex-start;
+      // }
+    }
+    .card__text {
+      font-size: 16px;
+      .card__links {
+        a {
+          margin: 14px;
+          font-size: 12px;
+        }
+      }
+    }
+  }
+  .designs-grid-container {
+    .designs-card {
+      grid-template-columns: 1fr !important;
+      .design__img {
+        width: 100%;
+      }
+    }
+  }
+  .footer {
+    padding: 0.5rem 0;
+    &__social-links {
+      a {
+        margin-right: 4px !important;
+      }
+    }
+  }
+}
+
+@include md-screen {
+  .home {
+    &__header {
+      width: 100%;
+      font-size: 1.1rem;
+      h1 {
+        font-size: 2.8rem;
+      }
+      h1 span:first-of-type {
+        display: none;
+      }
+      h1 span::before {
+        content: '';
+        display: block;
+        margin: 1rem 0;
+        color: $accent-color;
+        border: none;
+        height: 4px;
+        background-image: linear-gradient(
+          to right,
+          rgba(0, 0, 0, 0),
+          $accent-color,
+          rgba(0, 0, 0, 0)
+        );
+      }
+    }
+  }
+  .nav {
+    padding: 0 1rem;
+    &__list {
+      height: 100vh;
+      width: 100%;
+      background-color: $bg-color;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      font-weight: 600;
+      position: absolute;
+      top: -1000%;
+      left: 0;
+      transition: 1s;
+      z-index: 69;
+      border-bottom: 4px solid $accent-color;
+      border-radius: 50px;
+      &::before {
+        content: '';
+        display: block;
+        background-image: linear-gradient(
+          to right,
+          rgba(0, 0, 0, 0),
+          #bf8c4e,
+          rgba(0, 0, 0, 0)
+        );
+        height: 4px;
+        width: 70%;
+        margin: 0 auto 3rem auto;
+      }
+      &::after {
+        content: '';
+        display: block;
+        background-image: linear-gradient(
+          to right,
+          rgba(0, 0, 0, 0),
+          #bf8c4ed5,
+          rgba(0, 0, 0, 0)
+        );
+        height: 4px;
+        width: 70%;
+        margin: 3rem auto 0 auto;
+      }
+      li.active::before,
+      li.active::after {
+        display: none;
+      }
+      li {
+        display: block;
+        text-align: center;
+
+        a {
+          color: $font-color;
+          display: inline-block;
+          text-transform: uppercase;
+          font-size: 2.5rem;
+          padding: 1rem;
+        }
+      }
+      li:not(:last-child) {
+        margin-bottom: 3rem;
+      }
+    }
+    &__menu {
+      display: flex;
+      align-items: center;
+      z-index: 69;
+      i {
+        width: 100%;
+        display: inline-block;
+        cursor: pointer;
+        top: 0;
+        right: 0;
+        text-align: center;
+      }
+    }
+  }
+  .about {
+    &__skills {
+      flex-direction: column;
+      .skills-container {
+        margin-top: 2rem;
+        .skills-description {
+          width: 70%;
+          margin: auto;
+        }
+      }
+    }
+  }
+  .footer {
+    padding: 1rem;
+    &__social-links i.fab {
+      font-size: 16px;
+    }
+    .tooltiptext {
+      display: none;
+    }
+  }
+  .projects {
+    &-grid-container {
+      grid-template-columns: 1fr !important;
+    }
+    .designs-grid-container {
+      .designs-card {
+        grid-template-columns: 1fr !important;
+        .design__img {
+          width: 100%;
+        }
+      }
+    }
+  }
+  .contact {
+    height: 100%;
+    .contact-container {
+      width: 90%;
+      .contact__social-links {
+        flex-flow: wrap;
+        .container-links {
+          margin-bottom: 1.4rem;
+        }
+      }
+    }
+  }
+}
+
+@include lg-screen {
+  .nav {
+    &__list {
+      li {
+        .hov {
+          display: none;
+        }
+      }
+    }
+  }
+  .projects {
+    height: 100%;
+    &-grid-container {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+}

@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;600;700&display=swap');
+
+$font-fam: 'Rubik', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+  Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+$bg-color: #1a1b1d; //60%
+// $light-bg: #414244;
+$font-color: #f2dc99; //30%
+$accent-color: #bf8c4e; //10%
+$wew-color: #ba881d;
+$primary-color: #04bfbf;
+// $secondary-color: #022e40;
+// $tertiary-color: #025e73;
+$main-gradient: linear-gradient(120deg, #002b43, #015b76, #007b93);
+$border-gradient: linear-gradient(120deg, #f2dc99, #f1ce64, #f0bf2d);
+$a-hover-gradient--deepSpace: linear-gradient(to right, #000000, #434343);
+$a-hover-gradient--gradeGrey: linear-gradient(to right, #bdc3c7, #2c3e50);
+$a-hover-gradient: linear-gradient(
+  to bottom,
+  #e6ebeefa,
+  #bdc3c7,
+  #e6ebeefa,
+  #2c3e50
+);
+
+@mixin sm-screen {
+  @media (max-width: 414px) {
+    @content;
+  }
+}
+@mixin md-screen {
+  @media (max-width: 868px) {
+    @content;
+  }
+}
+@mixin lg-screen {
+  @media (max-width: 1024px) {
+    @content;
+  }
+}
+
+.loader-wrapper {
+  width: 100%;
+  height: 100%;
+  background-color: #1a1b1d;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 1;
+}
+
+// .loader-wrapper.hidden {
+//   animation: fadeOut 1.4s;
+//   animation-fill-mode: forwards;
+// }
+
+// @keyframes fadeOut {
+//   100% {
+//     opacity: 0;
+//     visibility: hidden;
+//   }
+// }
+
+.underline {
+  cursor: pointer;
+  text-transform: none;
+  text-decoration: underline;
+  transition: color 0.3s;
+  &:hover {
+    color: $accent-color;
+  }
+}
