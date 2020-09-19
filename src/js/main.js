@@ -30,6 +30,7 @@ li.forEach(function (lis) {
   lis.addEventListener('mousemove', function (e) {
     const hov = e.target.firstElementChild;
 
+    hov.style.opacity = '1';
     hov.style.left = +e.offsetX + '%';
     hov.style.transform = 'translateX(-25px)';
   });
@@ -48,7 +49,8 @@ li.forEach(function (lis) {
   lis.addEventListener('mouseleave', function (e) {
     const hov = e.target.firstElementChild;
 
-    hov.style.left = '-50%';
+    hov.style.opacity = '0';
+    // hov.style.left = '-50%';
   });
 });
 
@@ -102,8 +104,10 @@ projectType.addEventListener('click', function (e) {
     gridContainer.forEach(function (grids) {
       if (grids == targetContainer) {
         grids.classList.add('active-projects');
+        searchBar.placeholder = 'Search Designs';
       } else {
         grids.classList.remove('active-projects');
+        searchBar.placeholder = 'Search Projects';
       }
     });
   }

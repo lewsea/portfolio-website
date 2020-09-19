@@ -79,6 +79,7 @@
     }
     &:hover .card__img {
       opacity: 0.5;
+      filter: blur(2px);
     }
     &:hover .card__text {
       opacity: 1;

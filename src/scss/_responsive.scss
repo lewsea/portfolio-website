@@ -2,14 +2,31 @@
   .home {
     font-size: 1.3rem;
     &__header {
+      padding-bottom: 10px;
       h1 {
         font-size: 36px !important;
       }
-    }
-    button {
-      &:first-of-type {
-        margin-right: 1rem;
+      p {
+        margin: 14px 4px;
       }
+    }
+    .header__buttons {
+      flex-direction: column;
+      button {
+        width: 50%;
+        margin: auto;
+        &:first-of-type {
+          margin-bottom: 1rem;
+        }
+      }
+    }
+  }
+  .about {
+    &__info {
+      padding: 1rem;
+    }
+    .skills-container:hover {
+      margin: 2rem 0;
     }
   }
   .projects {
@@ -35,12 +52,26 @@
       }
     }
   }
+  .contact__header {
+    text-align: center;
+    h2 {
+      font-size: 1.8rem;
+      margin: 24px 0;
+    }
+  }
   .designs-grid-container {
     .designs-card {
       grid-template-columns: 1fr !important;
       .design__img {
         width: 100%;
       }
+    }
+  }
+  .contact__social-links {
+    flex-direction: column;
+    .container-links {
+      width: 50%;
+      align-self: center;
     }
   }
   .footer {
@@ -170,9 +201,18 @@
     }
   }
   .footer {
-    padding: 1rem;
-    &__social-links i.fab {
-      font-size: 16px;
+    padding: 10px;
+    font-size: 20px;
+
+    &__social-links {
+      a {
+        &:not(:last-child) {
+          margin: 0 4px;
+        }
+        i {
+          font-size: 20px;
+        }
+      }
     }
     .tooltiptext {
       display: none;
@@ -196,7 +236,7 @@
     .contact-container {
       width: 90%;
       .contact__social-links {
-        flex-flow: wrap;
+        // flex-flow: wrap;
         .container-links {
           margin-bottom: 1.4rem;
         }
