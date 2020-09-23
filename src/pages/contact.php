@@ -1,3 +1,29 @@
+<?php
+    $message_sent = false;
+    if(isset($_POST['email']) && $_POST['email'] != '') {
+        if( filter_var($_POST['email'], FILTER_VALIDATE_EMAIL) ) {
+
+            $userName = $_POST['name'];
+            $userEmail = $_POST['email'];
+            $messageSubject = $_POST['subject'];
+            $message = $_POST['message'];
+
+            $to = 'luis.gudmalin@gmail.com';
+            $body = "";
+
+            $body .= "From: ".$userName. "\r\n";
+            $body .= "Email: ".$userEmail. "\r\n";
+            $body .= "Message: ".$message. "\r\n";
+
+            mail($to, $messageSubject, $body);
+
+            $message_sent = true;
+        }
+        else {
+            $invalid_class_name = "form-invalid";
+        }
+    }
+?> 
 <!DOCTYPE html>
 <html lang="en">
 
@@ -12,6 +38,17 @@
 </head>
 
 <body>
+    <?php 
+        if($message_sent):
+    ?>
+
+    <div id="contactModal" class="contact-modal">
+        <h4>Thanks, we'll be in touch</h4>
+    </div>
+
+    <?php
+    else:
+    ?>
     <nav class="nav animation">
         <div class="nav__logo">
             <img src="../img/icons/logo.svg" alt="logo" />
@@ -20,10 +57,10 @@
             <li class='li'><span class="hov"></span><a href="/index.html" class="sova">home</a></li>
             <li class='li'><span class="hov"></span><a href="about.html" class="sova">about</a></li>
             <li class='li'><span class="hov"></span><a href="projects.html" class="sova">projects</a></li>
-            <li class="active"><a href="contact.html">contact</a></li>
+            <li class="active"><a href="contact.php">contact</a></li>
         </ul>
         <div class="nav__menu">
-            <i class="fa fa-bars" id="menu__hamburg" onclick="navigator()">
+            <i class="fa fa-bars" id="menu__hamburg">
             </i>
         </div>
     </nav>
@@ -33,24 +70,20 @@
                 <h1>Let's start a project together</h1>
                 <p>I am interested in freelance opportunities, a project collaboration or if you want to just say hi.
                     Don't hesitate to contact me by filling up the form below or send an email to <a
-                        href="">luis.gudmalin@gmail.com</a> and let's talk.</p>
+                        href="mailto:luis.gudmalin@gmail.com">luis.gudmalin&commat;gmail.com</a> and let's talk.</p>
             </div>
             <div class="contact__form">
-                <form action="webform.php" method="POST" class="form">
+                <form action="contact.php" method="POST" class="form">
                     <div class="form-group name">
-                        <!-- <label for="name" class="form-label">Your Name</label> -->
                         <input type="text" class="name" id="name" name="name" placeholder="Name" tabindex="1" required>
-                        <!-- <label for="email" class="form-label">Your Email</label> -->
                         <input type="email" class="email" id=" email" name="email" placeholder="Email" tabindex="2"
                             required>
                     </div>
                     <div class="form-group">
-                        <!-- <label for="subject" class="form-label">Subject</label> -->
                         <input type="text" class="form-control" id="subject" name="subject" placeholder="Subject"
                             tabindex="3" required>
                     </div>
                     <div class="form-group">
-                        <!-- <label for="message" class="form-label">Message</label> -->
                         <textarea class="form-control" id="message" name="message" placeholder="Message"
                             style="height: 200px;"></textarea>
                     </div>
@@ -78,7 +111,10 @@
     </main>
     <div class="minimap">
     </div>
-    <script src="/src/js/main.js"></script>
+    <?php
+    endif;
+    ?>
+    <script src="../js/main.js" ></script>
 </body>
 
 </html>

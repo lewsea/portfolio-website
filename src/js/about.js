@@ -1,8 +1,8 @@
 // mobile nav
-function navigator() {
-  const menu__hamburg = document.getElementById('menu__hamburg');
-  const nav__list = document.getElementById('nav__list');
+const menu__hamburg = document.getElementById('menu__hamburg');
+const nav__list = document.getElementById('nav__list');
 
+menu__hamburg.addEventListener('click', function () {
   if (menu__hamburg.classList.contains('fa-bars')) {
     menu__hamburg.classList.remove('fa-bars');
     menu__hamburg.classList.add('fa-times');
@@ -12,7 +12,7 @@ function navigator() {
     menu__hamburg.classList.add('fa-bars');
     nav__list.style.top = '-1000%';
   }
-}
+});
 
 // hover nav
 const li = document.querySelectorAll('.li');
