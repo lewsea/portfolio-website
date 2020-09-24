@@ -41,6 +41,7 @@
     <?php 
         if($message_sent):
     ?>
+    
     <div id="contactModal" class="contact-modal">
         <i class="fas fa-check"></i>
         <hr>
@@ -48,6 +49,7 @@
         <p>Thanks, your email has been sent.</p>
         <button id="closeBtnModal">OK</button>
     </div>
+    
     <nav class="nav animation">
         <div class="nav__logo">
             <img src="../img/icons/logo.svg" alt="logo" />
