@@ -1231,6 +1231,51 @@ a {
   margin-bottom: 2rem;
 }
 
+.contact-modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  background-color: #1a1b1d;
+  border: 1px solid #f2dc99;
+  padding: 1.5rem 3.4rem;
+  padding-top: 0;
+  padding-bottom: 0;
+  text-align: center;
+  z-index: 420;
+}
+
+.contact-modal hr {
+  color: #bf8c4e;
+  border: none;
+  height: 1px;
+  background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0)), color-stop(#bf8c4e), to(rgba(0, 0, 0, 0)));
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0), #bf8c4e, rgba(0, 0, 0, 0));
+  margin: 1rem 0;
+}
+
+.contact-modal i {
+  font-size: 2.4rem;
+  border: 1px solid #bf8c4e;
+  padding: 1.4rem;
+  background-color: #1a1b1d;
+  border-radius: 50%;
+  margin: 1rem 0;
+}
+
+.contact-modal p {
+  margin: 1.4rem 0;
+}
+
+.contact-modal button {
+  border: 2px solid #bf8c4e;
+  padding: 0.5rem 1.5rem;
+  background-color: #1a1b1d;
+  color: #f2dc99;
+  cursor: pointer;
+}
+
 .footer {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1531,6 +1576,10 @@ a {
   }
   .projects .designs-grid-container .designs-card .design__img {
     width: 100%;
+  }
+  .contact-modal {
+    padding: 0;
+    width: 75%;
   }
   .contact {
     height: 100%;
