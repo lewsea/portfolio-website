@@ -49,9 +49,6 @@
         font-size: 1rem;
         resize: none;
         font-family: $font-fam;
-        &:invalid:focus {
-          // border-color: crimson;
-        }
         &:focus {
           filter: brightness(1.4);
         }
